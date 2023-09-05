@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,200&display=swap');
+
+*{
+    margin: 0px;
+    font-family: "DM Sans", "Sans";
+}
+header {
+    position: fixed;
+    top: 0;
+    width:20%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: black;
+    color: white;
+}
+
+header .logo img{
+    width: 60%;
+}
+
+header .nav-links ul, .playlistNav ul,header .favs ul{
+    list-style-type: none;
+    padding: 0px;
+    text-transform: capitalize;
+}
+header .nav-links ul li, .playlistNav ul li{
+    padding: 1px 5px;
+    border-radius: 5px;
+}
+header .nav-links ul li:hover, .playlistNav ul li:hover{
+    background-color: rgb(54, 54, 54);
+    border-radius: 5px;
+}
+header .nav-links ul .home{
+    background-color: rgb(54, 54, 54);
+}
+header .nav-links ul li a, .playlistNav ul li a, header .installApp{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin:5px 0px;
+    text-decoration: none;
+    color: #fff;
+}
+header .nav-links ul li img, .playlistNav ul li img{
+    width: 25px;
+}
+
+header .favs h4{
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+header .favs ul li{
+    margin: 6px 0px;
+}
+header .installApp h4{
+    text-transform: capitalize;
+}
+/* Main section */
+main{
+    background: linear-gradient(180deg, #222 0%, #1F1F1F 11.64%, #171717 25.66%, #161616 32.94%, #151515 35.98%, #131313 44.89%, #121212 55.22%, #121212 75.34%, #121212 85.45%, rgba(18, 18, 18, 0.00) 100%);
+}
+#featured , #playlistGrid{
+    /* width: 800px; */
+    margin-left: 20%;
+    padding-left: 40px;
+    color: white;
+}
+#featured {
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around; 
+}
+#featured .featured-profile{
+    width: 100%;
+    display: flex;
+    padding: 15px 0px 35px 0px;
+    justify-content: space-between;
+}
+#featured .featured-profile .buttons{
+    display: flex;
+    padding-left: 10px;
+    gap: 10px;
+}
+#featured .featured-profile .buttons img, #featured .featured-profile .profile img{
+    width: 30px;
+}
+#featured .featured-profile .profile{
+    display: flex;
+    gap: 5px;
+    margin-right: 10px;
+    width: fit-content;
+    align-items: center;
+    background-color: #000;
+    border-radius: 50px;
+}
+#featured h2{
+    padding-left: 25px;
+}
+#featured .playlistcards{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    color: white;
+}
+#featured .playlistcards .playlist-card {
+    display: flex;
+    width: 250px;
+    height: 100px;
+    gap: 20px;
+    align-items: center;
+    margin: 10px;
+    flex-shrink: 0;
+    background-color: #282828;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+#featured .playlistcards .playlist-card .heart{
+    width: 40%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    border-radius: 4px 0px 0px 4px;
+    background: linear-gradient(135deg, #4000F4 0%, #603AED 22.48%, #7C6EE6 46.93%, #979FE1 65.71%, #A2B3DE 77.68%, #ADC8DC 88.93%, #C0ECD7 100%);
+}
+#featured .playlistcards .playlist-card .heart svg{
+    align-self: center;
+}
+
+/* music player */
+
+#musicPlayer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    background-color: black;
+    color: white;
+}
+#musicPlayer .musicPlayerControl {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+    background-color: black;
+}
+
+
+#musicPlayer .track-info {
+    flex:1;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+#musicPlayer .track-info img{
+    width: 40px;
+}
+#musicPlayer .track-info .track-info-text h4{
+    text-transform: capitalize;
+}
+#musicPlayer .track-info .track-info-text p{
+    font-size: 10px;
+    text-transform: uppercase;
+}
+#musicPlayer .track-info .red-heart{
+    color: red;
+}
+
+#musicPlayer .progress-bar {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+#musicPlayer .progress-bar .controls{
+    display: flex;
+    align-items: center;
+}
+#musicPlayer .progress-bar .progress-bar-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+#musicPlayer .progress-bar .progress-bar-content .song-progress {
+    width: 60%;
+    height: 6px;
+    background-color: #a3a3a3;
+    border-radius: 10px;
+}
+#musicPlayer .progress-bar .progress-bar-content .song-progress .song-progress-content {
+    width: 86%;
+    height: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+#musicPlayer .volumes {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#musicPlayer .volumes .volume{
+    width:7vw ;
+    height: 5px;
+    border-radius: 10px;
+    background-color: rgb(139, 138, 138);
+    
+}
+#musicPlayer .volumes .volume .volume-bar{
+    width:70% ;
+    height: 5px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+#musicPlayer .playing{
+    /* height: 20px; */
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background-color: green;
+}
+#musicPlayer .playing p{
+    font-size: 14px;
+    float: right;
+    padding-right: 30px;
+}
+/* Playlist grid */
+#playlistGrid .grid-text{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 25px;
+}
+#playlistGrid .grid-list{
+
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #121212;
+    color: white;
+}
+
+#playlistGrid .grid-list .playlist-card {
+    background-color: #282828;
+    width: fit-content;
+    
+    padding: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#playlistGrid .playlist-card img {
+    width: 100%;
+    height: auto;
+}
+#playlistGrid .playlist-card .playlistcard-text{
+    margin-top: 10px;
+}
+#playlistGrid .playlist-card .title {
+    font-family: DM Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.42px;
+}
+
+#playlistGrid .playlist-card .creator {
+    color: #B3B3B3;
+    font-family: DM Sans;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.15px;
+    margin-top: 5px;
+}
